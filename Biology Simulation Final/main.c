@@ -29,7 +29,7 @@ typedef struct {
     int alive;          // 1: Alive, 0: Dead
 } Person;
 
-void initialize_population(Person *people) {
+void initialise_population(Person *people) {
     for (int i = 0; i < POPULATION; i++) {
         people[i].x = rand() % WINDOW_WIDTH;
         people[i].y = rand() % WINDOW_HEIGHT;
@@ -39,7 +39,7 @@ void initialize_population(Person *people) {
         people[i].infection_time = 0;
         people[i].alive = 1; // Start as alive
     }
-    // Initialize patient zero
+    // Initialise patient zero
     people[0].state = 1;
 }
 
@@ -128,7 +128,7 @@ void draw_population(SDL_Renderer *renderer, Person *people) {
             // Add rash pattern to infected people (bigger spots and more identifiable color)
             SDL_SetRenderDrawColor(renderer, 139, 0, 0, 255); // Dark Red color for rash spots
             for (int j = 0; j < 8; j++) {  // Increase the number of rash spots
-                // Randomize the positions of rash spots within the person’s radius
+                // Randomise the positions of rash spots within the person’s radius
                 int spot_x = rand() % (PERSON_RADIUS * 2) - PERSON_RADIUS;
                 int spot_y = rand() % (PERSON_RADIUS * 2) - PERSON_RADIUS;
                 // Make sure the spot is within the boundary of the person (within the main circle)
@@ -151,7 +151,7 @@ int main(int argc, char* argv[]) {
     srand(time(0));
 
     if (SDL_Init(SDL_INIT_VIDEO) != 0) {
-        printf("Error initializing SDL: %s\n", SDL_GetError());
+        printf("Error initialising SDL: %s\n", SDL_GetError());
         return 1;
     }
 
@@ -168,7 +168,7 @@ int main(int argc, char* argv[]) {
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     Person people[POPULATION];
-    initialize_population(people);
+    initialise_population(people);
 
     int running = 1, frame = 0;
     SDL_Event event;
