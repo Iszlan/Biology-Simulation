@@ -1,0 +1,3 @@
+C:/Users/zisla/Desktop/Code/Mini Projects/C/Biology Simulation Final/cmake-build-debug/CMakeFiles/Biology_Simulation_Final.dir
+C:/Users/zisla/Desktop/Code/Mini Projects/C/Biology Simulation Final/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/zisla/Desktop/Code/Mini Projects/C/Biology Simulation Final/cmake-build-debug/CMakeFiles/rebuild_cache.dir
